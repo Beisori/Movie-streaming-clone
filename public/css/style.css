@@ -4,11 +4,10 @@
     box-sizing: border-box;
 }
 
-
 body{
     width: 100%;
     position: relative;
-    background-color: black;
+    background-color: #2b2b2b;
     font-family: "roboto", sans-serif;
 }
 
@@ -26,4 +25,13 @@ body{
 
 .logo{
     height: 60%;
+}
+
+.join-box{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    
 }
