@@ -1,4 +1,4 @@
-const express = require("express");
+/*const express = require("express");
 const path = require("path");
 
 let initial_path = path.join(__dirname, "public");
@@ -12,4 +12,4 @@ app.get("/", (req, res) => {
 
 app.listen(3000, () => {
     console.log("listening on port 3000...");
-})
+})*/
