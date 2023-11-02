@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/Beisori/Movie-streaming-clone#readme",
   "dependencies": {
+    "axios": "^1.6.0",
     "express.js": "^1.0.0",
+    "node-sass": "^9.0.0",
     "nodemon": "^3.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.17.0"
   }
 }
