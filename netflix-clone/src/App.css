@@ -1,6 +1,11 @@
 #root{
     /*
     Tähän tulee perus layout netflix, punainen banner yms.
-    */
+    
     max-width: 1280px;
+    */
+}
+
+.app {
+    background-color: gray;
 }
