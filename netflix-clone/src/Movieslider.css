@@ -1,0 +1,15 @@
+.movie-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 20px;
+    justify-content: center;
+    overflow: scroll;
+}
+.slider-image{
+    border-radius: 4px;
+    max-height: 200px;
+    margin-right: 10px;
+    transition: transform 450ms;
+    transform: translateX(-50%)
+}

@@ -12,9 +12,7 @@ function App() {
     <div className="App">
       {/*<Route path="home" component={home} />*/}
       <Navbar />
-      {/*<Row title="Trending" />
-      <Row title="Top rated" />*/}
-
+      <MovieSlider/>
     </div>
   );
 }

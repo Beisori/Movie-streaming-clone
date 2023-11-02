@@ -1,6 +1,6 @@
 import axios from "./axios"
 import React, { useEffect, useState } from 'react'
-
+import './Movieslider.css'
 
 const API_KEY = "eaa4d9ee470345a99f952f889c06479c";
 const requestURL = "https://api.themoviedb.org/3";
@@ -22,19 +22,19 @@ function MovieSlider(){
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        const getMovieData = async () => {
-            const response = await axios.get(requestURL)
-            setMovies(response.data.results)
-        }
-        getMovieData();
-    }, [requestURL]);
+        async function getMovieData(requestKey){
+            const response = await axios.get(`${requestURL}${requests[requestKey]}`)
+            setMovies(response.data.results);
+        };
+        getMovieData('fetchTrending');
+    }, [requestURL])
 
     return(
         <>
             <div class="movie-container">
                 {movies.map(movie =>(
                     <div key={movie.id}>
-                        <img className="slider-image" src={`${imageBaseUrl}${movie.poster_path}`}/>
+                        <img className="slider-image" src={`${imageBaseUrl}${movie.backdrop_path}`}/>
                     </div>
                 ))}
             </div>
