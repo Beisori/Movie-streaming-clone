@@ -9,6 +9,9 @@ import { BrowserRouter } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
+
+      <p>Hello world</p>
+
       {/*<Route path="home" component={home} />*/}
       <Navbar />
       {/*<Row title="Trending" />
