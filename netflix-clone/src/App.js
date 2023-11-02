@@ -1,12 +1,16 @@
 import React from 'react'
 import './App.css';
-import Nav from './Nav';
+import Navbar from './Navbar';
+import home from './pages/home'
+import series from './pages/series'
+import movies from './pages/movies'
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <h1>Hello world</h1>
+      {/*<Route path="home" component={home} />*/}
+      <Navbar />
       {/*<Row title="Trending" />
       <Row title="Top rated" />*/}
 
