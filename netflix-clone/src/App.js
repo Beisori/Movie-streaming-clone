@@ -5,13 +5,11 @@ import home from './pages/home'
 import series from './pages/series'
 import movies from './pages/movies'
 import { BrowserRouter } from 'react-router-dom';
+import MovieSlider from './Movieslider';
 
 function App() {
   return (
     <div className="App">
-
-      <p>Hello world</p>
-
       {/*<Route path="home" component={home} />*/}
       <Navbar />
       {/*<Row title="Trending" />
