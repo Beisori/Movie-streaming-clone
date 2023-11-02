@@ -1,12 +1,10 @@
 import React from 'react'
 import './App.css';
-import Nav from './Nav';
+import Navbar from './Navbar';
 
 function App() {
   return (
     <div className="App">
-
-      <p>Hello world</p>
 
       {/*<Route path="home" component={home} />*/}
       <Navbar />
