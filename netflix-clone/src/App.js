@@ -9,10 +9,12 @@ import MovieSlider from './Movieslider';
 
 function App() {
   return (
+    //implement routing with the router component
+    //change Movieslider component to home.js file
     <div className="App">
       {/*<Route path="home" component={home} />*/}
       <Navbar />
-      <MovieSlider/>
+      <MovieSlider title="Trending"/>
     </div>
   );
 }

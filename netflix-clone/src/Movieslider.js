@@ -18,7 +18,7 @@ const requests = {
     fetchHorror:`discover/movie?api_key=${API_KEY}&with_genres=27`,
 }
 
-function MovieSlider(){
+function MovieSlider({title}){
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
