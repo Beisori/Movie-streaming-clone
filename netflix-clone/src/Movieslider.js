@@ -26,9 +26,7 @@ function MovieSlider({title}){
             const response = await axios.get(`${requestURL}${requests[requestKey]}`)
             setMovies(response.data.results);
         };
-        getMovieData('fetchTrending', 'fetchTopRated', 
-        'fetchPopular', 'fetchTVShows', 'fetchComedy', 
-        'fetchAction', 'fetchDocumentaries', 'fetchHorror');
+        getMovieData();
     }, [requestURL])
 
     return(
