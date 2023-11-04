@@ -26,12 +26,14 @@ function MovieSlider({title}){
             const response = await axios.get(`${requestURL}${requests[requestKey]}`)
             setMovies(response.data.results);
         };
-        getMovieData('fetchTrending');
+        getMovieData('fetchTrending', 'fetchTopRated', 
+        'fetchPopular', 'fetchTVShows', 'fetchComedy', 
+        'fetchAction', 'fetchDocumentaries', 'fetchHorror');
     }, [requestURL])
 
     return(
         <>
-            <div class="movie-container">
+            <div className="movie-container">
                 {movies.map(movie =>(
                     <div key={movie.id}>
                         <img className="slider-image" src={`${imageBaseUrl}${movie.backdrop_path}`}/>
