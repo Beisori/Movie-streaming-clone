@@ -1,3 +1,6 @@
+.movie-title{
+    color: white;
+}
 .movie-container{
     display: flex;
     flex-direction: row;
@@ -6,7 +9,7 @@
     justify-content: center;
     overflow: scroll;
 }
-.slider-image{
+.movie-image{
     border-radius: 4px;
     max-height: 200px;
     margin-right: 10px;
