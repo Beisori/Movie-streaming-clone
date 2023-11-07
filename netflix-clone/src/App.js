@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Navbar';
 import MovieSlider from './Movieslider';
 import requests from './requests';
->>>>>>> c257263af80fbd6184af02dbc02b8e872a33ecac
+
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
       <MovieSlider title="Horror" requestUrl={requests.fetchHorror}/>
       <MovieSlider title="Documentaries" requestUrl={requests.fetchDocumentaries}/>
     </div>
->>>>>>> c257263af80fbd6184af02dbc02b8e872a33ecac
+
   );
 }
 
