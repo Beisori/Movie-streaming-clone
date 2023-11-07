@@ -1,5 +1,5 @@
-const Series = () => {
-    return <h1>Series</h1>;
-  };
-  
-  export default Series;
+export function Series() {
+  return <h1>Series</h1>
+}
+
+export default Series;
