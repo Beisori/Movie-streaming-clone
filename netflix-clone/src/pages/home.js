@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Carousel from './Carousel';
+import Carousel from '../Carousel';
 
-function Slider() {
+function Home() {
   return (
     <div className='App'>
       <Carousel />
@@ -9,4 +9,4 @@ function Slider() {
   )
 }
 
-export default Slider
+export default Home;
