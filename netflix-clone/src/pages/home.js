@@ -6,6 +6,4 @@ export function Home() {
   <div>
     <Slider />
   </div>
-
 }
-
