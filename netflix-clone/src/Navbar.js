@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './Navbar.css';
 import Home from './pages/Home';
 import Series from './pages/Series';
-import Movies from './pages/Movies';
+import Movies from './pages/ListAllMovies';
 import New from './pages/New';
 import Mylist from './pages/Mylist';
 import NotFound from './pages/Notfound';
