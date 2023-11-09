@@ -6,41 +6,41 @@ import Series from './pages/Series';
 import Movies from './pages/Movies';
 import New from './pages/New';
 import Mylist from './pages/Mylist';
-import NotFound from './pages/Notfound';
+
+
 
 
 function Navbar() {
   return (
     <BrowserRouter>
-    <nav className="navbar">
+      <nav className="navbar">
         <div className="navbar-logo">
-      <img className="navbar-logo" src={require("./img/logo.png")} alt="Netflix Logo" />
-      </div>
+          <img className="navbar-logo" src={require("./img/logo.png")} alt="Netflix Logo" />
+        </div>
       <div className="navbar-links">
         <Link to="Home">Home</Link>
         <Link to="Series">Series</Link>
         <Link to="Movies">Movies</Link>
         <Link to="New">New and popular</Link>
         <Link to="Mylist">My list</Link>
-        </div>
-        <div className="navbar-search">
-        <input type="text" placeholder="Search for movies and series" />
       </div>
-        <div className="navbar-avatar">
+        <div className="navbar-search">
+          <input type="text" placeholder="Search for movies and series" />
+      </div>
+      <div className="navbar-avatar">
         <img
         className="navbar_avatar"
         src={require("./img/Netflix-avatar.png")}
         alt="Netflix logo"/>
       </div>
-    </nav>
+      </nav>
       <Routes>
-      <Route path="/" element={<Home />} />
-     <Route path="/Movies" element={<Movies />} />
-      <Route path="/Series" element={<Series />} />
-      <Route path="/New" element={<New />} />
-      <Route path="/Mylist" element={<Mylist />} />
-      <Route path="*" element={<NotFound/>} />
-    </Routes>
+        <Route path="*" element={<Home />} />
+        <Route path="/Movies" element={<Movies />} />
+        <Route path="/Series" element={<Series />} />
+        <Route path="/New" element={<New />} />
+        <Route path="/Mylist" element={<Mylist />} />
+      </Routes>
     </BrowserRouter>
   );
 }
