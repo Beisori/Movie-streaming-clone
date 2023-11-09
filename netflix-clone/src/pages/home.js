@@ -1,12 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Carousel from '../Carousel';
-
-function Home() {
-  return (
-    <div className='App'>
-      <Carousel />
-    </div>
-  )
-}
+import Slider from '../Carousel';
 
 export default Home;
+export function Home() {
+  <div>
+    <Slider />
+  </div>
+
+}
+
