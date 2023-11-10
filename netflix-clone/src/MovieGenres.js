@@ -9,6 +9,7 @@ export default function MovieGenres(){
     //useState + useEffect
 
     //Create element to return that shows movies in a grid
+    //poster picture from API
     //GridContainer + individual items?
 
     return(
