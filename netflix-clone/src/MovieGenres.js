@@ -13,13 +13,14 @@ export default function MovieGenres(){
             setGenre(response.data.results);
         };
         getAllMovies();
-    }, [requestUrl]);
+    }, [requestUrl]); //requestUrl not needed probably, empty [] for rendering on need basis
 
     //Create element to return that shows movies in a flexbox with wrap
     //poster picture from API
 
-    //Conditional rendering with scroll?
     //Buttons that list movie genres based on ID
+    //Individual item takes what it needs genre state
+    //Map through genre and list that genre on individual links
 
     return(
         <div className="genre-dropdown-container">
