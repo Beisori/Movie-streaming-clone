@@ -15,14 +15,15 @@ export default function MovieGenres(){
         getAllMovies();
     }, [requestUrl]);
 
-    //Create element to return that shows movies in a grid
-    //Table or grid? Do research
+    //Create element to return that shows movies in a flexbox with wrap
     //poster picture from API
-    //GridContainer + individual items?
+
+    //Conditional rendering with scroll?
+    //Buttons that list movie genres based on ID
 
     return(
-        <>
+        <div className="genre-dropdown-container">
             
-        </>
+        </div>
     );
 }
