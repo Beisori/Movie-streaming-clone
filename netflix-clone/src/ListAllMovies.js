@@ -1,14 +1,26 @@
-import { useParams } from "react-router-dom"
+import { Await, useParams } from "react-router-dom"
 import axios from "axios"
-import { useEffect } from "react"
-export default function ListAllMovies() {
+import React, { useEffect, useState }from "react";
+
+const Main = () => {
+  
+  const [movies, setMovies] = useState([]);
+ 
   return <h1>Movies</h1>
   
-}
-const getMovies = () => {
-  const responce = axios.get("https://api.themoviedb.org/3/movie/top_rated")}
+  useEffect(() => {
+      getMovies(id)
+  },[])
 
-useParams: [API_KEY = "eaa4d9ee470345a99f952f889c06479c"]
-{/*export default Movies;*/}
+const getMovies = async (id) => {
+  const response = await axios.get("https://api.themoviedb.org/3/genre/movie/list${id}?api_key=eaa4d9ee470345a99f952f889c06479c&language=en")}
+  const data = response.data;
+  console.log(data);
+
+  useParams: [API_KEY = "eaa4d9ee470345a99f952f889c06479c"]
+
+const imageBaseUrl = "https://image.tmdb.org/t/p/original/";
 
 useEffect ({getMovies})
+
+}
