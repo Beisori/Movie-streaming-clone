@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './Navbar.css';
 import Home from '../pages/Home';
@@ -11,9 +11,20 @@ import Mylist from './pages/Mylist';
 
 
 function Navbar() {
+  const Nav = () => {
+    const [scroll, setScroll] = useState(false);
+  
+    useEffect(() => {
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          setScroll(true);
+        } else setScroll(false);
+      });
+    }, []);
+  }
   return (
     <BrowserRouter>
-      <nav className="navbar">
+      <nav className={`navbar ${scroll && "navbar_black"}`}>
         <div className="navbar-logo">
           <img className="navbar-logo" src={require("./img/logo.png")} alt="Netflix Logo" />
         </div>
