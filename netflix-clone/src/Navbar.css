@@ -20,15 +20,15 @@
 }
 
 .navbar-logo {
-    /* margin-right: 70px;*/
+    margin-right: 70px;
     margin-left: 25px;
     padding: 8px;
     max-width: 100px;
     object-fit: contain;
-    position: fixed;
+    /*position: fixed;*/
 }
 
-/*.navbar-search {
+.navbar-search {
     flex: 1; 
     padding: 5px;
 }
@@ -47,7 +47,7 @@
 
 .navbar-links a:hover {
     text-decoration: underline;
-}*/
+}
 
 .navbar_avatar {
     position: fixed;

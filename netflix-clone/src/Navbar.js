@@ -11,7 +11,7 @@ import Mylist from './pages/Mylist';
 
 
 function Navbar() {
-  const Nav = () => {
+  /*const Nav = () => {
     const [scroll, setScroll] = useState(false);
   
     useEffect(() => {
@@ -21,29 +21,29 @@ function Navbar() {
         } else setScroll(false);
       });
     }, []);
-  }
+  }*/
   return (
     <BrowserRouter>
-      <nav className={`navbar ${scroll && "navbar_black"}`}>
-        <div className="navbar-logo">
-          <img className="navbar-logo" src={require("./img/logo.png")} alt="Netflix Logo" />
+      <nav className="navbar">
+          <div className="navbar-logo">
+            <img className="navbar-logo" src={require("./img/logo.png")} alt="Netflix Logo" />
+          </div>
+        <div className="navbar-links">
+          <Link to="Home">Home</Link>
+          <Link to="Series">Series</Link>
+          <Link to="Movies">Movies</Link>
+          <Link to="New">New and popular</Link>
+          <Link to="Mylist">My list</Link>
         </div>
-      <div className="navbar-links">
-        <Link to="Home">Home</Link>
-        <Link to="Series">Series</Link>
-        <Link to="Movies">Movies</Link>
-        <Link to="New">New and popular</Link>
-        <Link to="Mylist">My list</Link>
-      </div>
-        <div className="navbar-search">
-          <input type="text" placeholder="Search for movies and series" />
-      </div>
-      <div className="navbar-avatar">
-        <img
-        className="navbar_avatar"
-        src={require("./img/Netflix-avatar.png")}
-        alt="Netflix logo"/>
-      </div>
+          <div className="navbar-search">
+            <input type="text" placeholder="Search for movies and series" />
+        </div>
+        <div className="navbar-avatar">
+          <img
+          className="navbar_avatar"
+          src={require("./img/Netflix-avatar.png")}
+          alt="Netflix logo"/>
+        </div>
       </nav>
       <Routes>
         <Route path="*" element={<Home />} />
