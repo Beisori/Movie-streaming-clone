@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     z-index: 1;
-    align-items: center;
+    /*align-items: center;*/
     padding: 20px;
     width: 100%;
     display: flex;
@@ -24,6 +24,8 @@
     margin-left: 25px;
     padding: 8px;
     max-width: 100px;
+    object-fit: contain;
+    /*position: fixed;*/
 }
 
 .navbar-search {
@@ -34,6 +36,7 @@
 .navbar-links {
     display: flex;
     align-items: center;
+    left: 10rem;
 }
 
 .navbar-links a {
