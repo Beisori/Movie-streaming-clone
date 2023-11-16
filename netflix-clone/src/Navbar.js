@@ -1,7 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './Navbar.css';
-import Home from '../pages/Home';
+import Home from './pages/home';
 import Series from './pages/Series';
 import Movies from './pages/Movies';
 import New from './pages/New';
