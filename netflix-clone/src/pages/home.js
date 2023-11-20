@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Slider from '../Carousel';
 import MovieSlider from '../Movieslider';
 import requests from '../requests';
+import '../pages/home.css';
 
 export function Home() {
   return(
