@@ -1,5 +1,8 @@
+body{
+    background-color: #141414;
+}
 .movie-title{
-    color: white;
+    color: rgb(255, 255, 255);
     transform: translateY(100%);
     padding-left: 3%;
 }
