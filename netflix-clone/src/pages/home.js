@@ -6,7 +6,7 @@ import '../pages/home.css';
 
 export function Home() {
   return(
-    <div>
+    <div className='home-container'>
       <MovieSlider title="Trending" requestUrl={requests.fetchTrending}/>
       <MovieSlider title="Top Rated" requestUrl={requests.fetchTopRated}/>
       <MovieSlider title="Popular" requestUrl={requests.fetchPopular}/>
