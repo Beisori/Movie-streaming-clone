@@ -1,19 +1,26 @@
 import axios from "./axios"
 import React, { useEffect, useState } from 'react'
+import requests from "./requests";
 
-export default function MovieGenres(){
+export default function MovieGenres({requestUrl}){
     const [genre, setGenre] = useState([]);
+    const [movies, setMovies] = useState([]);
 
     //https://api.themoviedb.org/3/genre/movie/list?api_key=eaa4d9ee470345a99f952f889c06479c&language=en
     //^From here you can get the genre IDs for new requests.js paths
     useEffect(() => {
-        async function getAllMovies() { //Add URL for request
+        async function getAllMovies() {
             const response = await axios.get(requestUrl);
-            console.log('Response', response) //This doesn't work, use same type of search from discovery as in requests.js file
-            setGenre(response.data.results);
+            console.log('Response', response)
+            setMovies(response.data.results);
         };
         getAllMovies();
-    }, []);
+    }, [requestUrl]);
+
+    const changeGenreToAction = () => {
+        <MovieSlider title="Action" requestUrl={requests.fetchAction}/>
+    }
+
 
     //Create element to return that shows movies in a flexbox with wrap
     //poster picture from API
@@ -23,8 +30,8 @@ export default function MovieGenres(){
     //Map through genre based on ID and list that genre on individual links (router?)
 
     return(
-        <div className="genre-dropdown-container">
-            
+        <div>
+
         </div>
     );
 }
