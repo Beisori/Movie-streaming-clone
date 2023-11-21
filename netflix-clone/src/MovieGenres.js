@@ -17,8 +17,8 @@ export default function MovieGenres({requestUrl}){
         getAllMovies();
     }, [requestUrl]);
 
-    const changeGenreToAction = () => {
-        <MovieSlider title="Action" requestUrl={requests.fetchAction}/>
+    const inputChanged = (Event) => {
+        setGenre(Event.target.value);
     }
 
 
@@ -30,8 +30,11 @@ export default function MovieGenres({requestUrl}){
     //Map through genre based on ID and list that genre on individual links (router?)
 
     return(
-        <div>
-
+        <div className="dropdown-container">
+            <select className="dropdown-options" value={setGenre} onChange={inputChanged}>
+                <option value=''>select a genre</option>
+                <option value="Action">Action</option>
+            </select>
         </div>
     );
 }
