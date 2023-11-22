@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react'
 import requests from "./requests";
 
 export default function MovieGenres({requestUrl}){
-    const [genre, setGenre] = useState([]);
+    const [genre, setGenre] = useState('');
     const [movies, setMovies] = useState([]);
+    const [genreValue, setGenreValue] = useState('');
 
     //https://api.themoviedb.org/3/genre/movie/list?api_key=eaa4d9ee470345a99f952f889c06479c&language=en
     //^From here you can get the genre IDs for new requests.js paths
@@ -18,13 +19,18 @@ export default function MovieGenres({requestUrl}){
     }, [requestUrl]);
 
     const inputChanged = (Event) => {
-        setGenre(Event.target.value);
+        setGenreValue(Event.target.value);
     }
 
+    if(selectedGenre === 'Action'){
+        //Handle requestUrl fetches here based on the movie genres
+    }
+    setGenreValue(selectedGenre);
 
-    //Create element to return that shows movies in a flexbox with wrap
     //Create if statements for each option ex. action -> do fetch request like in movieslider component
 
+    //Inside return create similar mapping for movies as in movieslider which displays the info for movies
+    //For css use flexbox-wrap
     return(
         <div className="dropdown-container">
             <select className="dropdown-options" value={setGenre} onChange={inputChanged}>
