@@ -23,11 +23,7 @@ export default function MovieGenres({requestUrl}){
 
 
     //Create element to return that shows movies in a flexbox with wrap
-    //poster picture from API
-
-    //Buttons that list movie genres based on ID
-    //Individual item takes what it needs genre state
-    //Map through genre based on ID and list that genre on individual links (router?)
+    //Create if statements for each option ex. action -> do fetch request like in movieslider component
 
     return(
         <div className="dropdown-container">
