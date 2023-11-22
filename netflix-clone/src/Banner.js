@@ -28,7 +28,7 @@ function Banner() {
     }
 
     return (
-        <header className="Banner"
+        <header className="banner"
             style={{
                 backgroundSize: "cover",
                 backgroundImage: `url(
@@ -37,9 +37,9 @@ function Banner() {
                 backgroundPosition: "center center",
             }}
         >
-            <div className="Banner_contents">
+            <div className="banner_contents">
                 {/* title */}
-                <h1 className="banner_title">
+                <h1 className="banner__title">
                     {movie?.title || movie?.name || movie?.original_name}</h1>
 
                 <div className="banner__buttons">
@@ -47,7 +47,7 @@ function Banner() {
                     <button className="banner_button">My List</button>
                 </div>
 
-                <h1 className="banner_description">
+                <h1 className="banner__description">
                     {truncate(movie?.overview, 150)}
                 </h1>
             </div>
