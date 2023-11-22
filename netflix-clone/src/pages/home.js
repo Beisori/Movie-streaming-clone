@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Slider from '../Banner';
+import Banner from '../Banner';
+import '../Banner.css';
 import MovieSlider from '../Movieslider';
 import requests from '../requests';
 import '../pages/home.css';
@@ -7,6 +8,8 @@ import '../pages/home.css';
 export function Home() {
   return (
     <div className='home-container'>
+
+      <Banner></Banner>
       <MovieSlider title="Trending" requestUrl={requests.fetchTrending} />
       <MovieSlider title="Top Rated" requestUrl={requests.fetchTopRated} />
       <MovieSlider title="Popular" requestUrl={requests.fetchPopular} />
