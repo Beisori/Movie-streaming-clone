@@ -2,11 +2,11 @@ import axios from "./axios"
 import React, { useEffect, useState } from 'react'
 import requests from "./requests";
 
+const imageBaseUrl = "https://image.tmdb.org/t/p/original/";
+
 export default function MovieGenres({requestUrl}){
     const [movies, setMovies] = useState([]);
 
-    const [genreValue, setGenreValue] = useState('');
-    const [optionValue, setOptionValue] = useState('');
 
     //https://api.themoviedb.org/3/genre/movie/list?api_key=eaa4d9ee470345a99f952f889c06479c&language=en
     //^From here you can get the genre IDs for new requests.js paths
@@ -19,25 +19,15 @@ export default function MovieGenres({requestUrl}){
         getAllMovies();
     }, [requestUrl]);
 
-    const inputChanged = (Event) => {
-        setGenreValue(Event.target.value);
-    }
 
-    if(setGenreValue === 'Action'){
-        <MovieSlider title="Action" requestUrl={requests.fetchAction}/>
-    }
-    setOptionValue(setGenreValue);
 
-    //Create if statements for each option ex. action -> do fetch request like in movieslider component
-
-    //Inside return create similar mapping for movies as in movieslider which displays the info for movies
-    //For css use flexbox-wrap
     return(
         <div className="dropdown-container">
-            <select className="dropdown-options" value={setGenre} onChange={inputChanged}>
+            <select className="dropdown-options" value={''} onChange={''}>
                 <option value=''>select a genre</option>
                 <option value="Action">Action</option>
             </select>
+
         </div>
     );
 }

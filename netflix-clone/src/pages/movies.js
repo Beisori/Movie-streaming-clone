@@ -1,5 +1,9 @@
-export default function Movies() {
-  return <h1>Movies</h1>
-}
+import MovieGenres from "../MovieGenres"
 
-{/*export default Movies;*/}
+export default function Movies() {
+  return (
+    <div>
+      <MovieGenres></MovieGenres>
+    </div>
+  )
+}
