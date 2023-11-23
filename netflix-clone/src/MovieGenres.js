@@ -2,11 +2,14 @@ import axios from "./axios"
 import React, { useEffect, useState } from 'react'
 import requests from "./requests";
 
+const imageBaseUrl = "https://image.tmdb.org/t/p/original/";
+
 export default function MovieGenres({requestUrl}){
     const [movies, setMovies] = useState([]);
 
-    const [genreValue, setGenreValue] = useState('');
-    const [optionValue, setOptionValue] = useState('');
+    const [selectedValue, setSelectedValue] = useState('');
+    const [selectedOption, setSelectedOption] = useState('');
+    const [displayedInfo, setDisplayedInfo] = useState('');
 
     //https://api.themoviedb.org/3/genre/movie/list?api_key=eaa4d9ee470345a99f952f889c06479c&language=en
     //^From here you can get the genre IDs for new requests.js paths
@@ -20,22 +23,28 @@ export default function MovieGenres({requestUrl}){
     }, [requestUrl]);
 
     const inputChanged = (Event) => {
-        setGenreValue(Event.target.value);
+        setSelectedValue(Event.target.value);
     }
 
-    if(setGenreValue === 'Action'){
-        <MovieSlider title="Action" requestUrl={requests.fetchAction}/>
+    if(selectedValue === 'Action'){
+        setDisplayedInfo(requests.fetchAction);
     }
-    setOptionValue(setGenreValue);
+    setSelectedValue(selectedValue);
+    setSelectedOption(selectedValue);
 
-    //Inside return create similar mapping for movies as in movieslider which displays the info for movies
     //For css use flexbox-wrap
     return(
         <div className="dropdown-container">
-            <select className="dropdown-options" value={setGenre} onChange={inputChanged}>
+            <select className="dropdown-options" value={selectedValue} onChange={inputChanged}>
                 <option value=''>select a genre</option>
                 <option value="Action">Action</option>
             </select>
+
+            {setDisplayedInfo && movies.map(movie => (
+                <div key={movie.id}>
+                    <img className="movie-image" src={`${imageBaseUrl}${movie.poster_path}`} alt={movie.title}/>
+                </div>
+            ))}
         </div>
     );
 }
