@@ -28,8 +28,6 @@ export default function MovieGenres({requestUrl}){
     }
     setOptionValue(setGenreValue);
 
-    //Create if statements for each option ex. action -> do fetch request like in movieslider component
-
     //Inside return create similar mapping for movies as in movieslider which displays the info for movies
     //For css use flexbox-wrap
     return(
