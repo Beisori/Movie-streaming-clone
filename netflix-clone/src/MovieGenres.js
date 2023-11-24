@@ -18,7 +18,6 @@ export default function MovieGenres({requestUrl}){
             const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${selectedGenre}&page=${page}`);
             console.log('Response', response)
             setMoviesByGenres((prevMovies) => [...prevMovies, ...response.data.results]);
-            setPage(prevPage => prevPage + 1);
         };
         getMoviesByGenre();
     }, [selectedGenre, page]);
@@ -30,8 +29,9 @@ export default function MovieGenres({requestUrl}){
 
     const handleScroll = () => {
         if(
-            window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight && selectedGenre
+            window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight && selectedGenre
         ); 
+        setPage(prevPage => prevPage + 1);
     }
 
     useEffect(() => {
