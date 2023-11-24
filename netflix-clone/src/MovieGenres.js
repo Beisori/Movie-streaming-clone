@@ -26,7 +26,7 @@ export default function MovieGenres({requestUrl}){
 
     const genreChanged = (Event) => {
         setSelectedGenre(Event.target.value);
-        setPage(1); //When genre changes, reset page
+        setPage(1);
     }
 
     const handleScroll = () => {
