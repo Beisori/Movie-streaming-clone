@@ -1,7 +1,6 @@
 import axios from "./axios";
 import React, { useEffect, useState } from 'react';
 import './MovieGenres.css';
-import Movies from "./pages/Movies";
 
 const API_KEY = "eaa4d9ee470345a99f952f889c06479c";
 const imageBaseUrl = "https://image.tmdb.org/t/p/original/";
@@ -31,7 +30,7 @@ export default function MovieGenres({requestUrl}){
 
     const handleScroll = () => {
         if(
-            window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight && selectedGenre
+            window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight && selectedGenre
         ); 
     }
 
