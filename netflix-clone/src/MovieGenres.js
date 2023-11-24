@@ -27,7 +27,6 @@ export default function MovieGenres({requestUrl}){
 
     return(
         <div className="genre-dropdown-container">
-            <h2 className="genre-title">Movies by genres</h2>
             <select id="genreDropdown" value={selectedGenre} onChange={genreChanged}>
                 <option value="">Genres</option>
                 <option value="28">Action</option>
