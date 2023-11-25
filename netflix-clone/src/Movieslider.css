@@ -1,9 +1,10 @@
-.movie-title{
-    color: white;
+.movie-title {
+    color: rgb(255, 255, 255);
     transform: translateY(100%);
     padding-left: 3%;
 }
-.movie-container{
+
+.movie-container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -12,10 +13,19 @@
     overflow: scroll;
 }
 
-.movie-image{
+.movie-container::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-image {
     border-radius: 4px;
     max-height: 200px;
     margin-right: 10px;
     transition: transform 450ms;
-    transform: translateX(-50%)
+    transform: translateY(10%)
+}
+
+.movie-image:hover {
+    cursor: pointer;
+    transform: scale(1.01);
 }
