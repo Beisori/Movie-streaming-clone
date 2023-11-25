@@ -28,15 +28,13 @@ export default function MovieGenres({requestUrl}){
     }
 
     const handleScroll = () => {
-        if(
-            window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight && selectedGenre
-        ); 
-        setPage(prevPage => prevPage + 1);
-    }
+        if(window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight){
+            setPage(prevPage => prevPage + 1);
+        }
+    };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-
         return() => {
             window.removeEventListener('scroll', handleScroll);
         };
