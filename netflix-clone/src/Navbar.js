@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import './Navbar.css';
-import Home from './pages/home';
+import Home from './pages/Home';
 import Series from './pages/Series';
 import Movies from './pages/ListAllMovies';
 import New from './pages/New';
 import Mylist from './pages/Mylist';
+import Search from './pages/Search';
 
 
 
@@ -23,9 +24,8 @@ function Navbar() {
         <Link to="Movies">Movies</Link>
         <Link to="New">New and popular</Link>
         <Link to="Mylist">My list</Link>
-      </div>
-        <div className="navbar-search">
-          <input type="text" placeholder="Search for movies and series" />
+        <Link to="Search">Search</Link>
+        
       </div>
       <div className="navbar-avatar">
         <img
@@ -40,6 +40,7 @@ function Navbar() {
         <Route path="/Series" element={<Series />} />
         <Route path="/New" element={<New />} />
         <Route path="/Mylist" element={<Mylist />} />
+        <Route path="/Search" element={<Search />} />
       </Routes>
     </BrowserRouter>
   );
