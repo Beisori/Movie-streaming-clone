@@ -16,7 +16,6 @@ export function Home() {
       <MovieSlider title="Action" requestUrl={requests.fetchAction} />
       <MovieSlider title="Comedies" requestUrl={requests.fetchComedy} />
       <MovieSlider title="Horror" requestUrl={requests.fetchHorror} />
-      <MovieSlider title="Documentaries" requestUrl={requests.fetchDocumentaries} />
     </div>
   );
 }
