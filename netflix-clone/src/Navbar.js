@@ -40,6 +40,7 @@ function Navbar() {
         <Route path="/Series" element={<Series />} />
         <Route path="/New" element={<New />} />
         <Route path="/Mylist" element={<Mylist />} />
+        <Route path="/Search" element={<Search />} />
       </Routes>
     </BrowserRouter>
   );

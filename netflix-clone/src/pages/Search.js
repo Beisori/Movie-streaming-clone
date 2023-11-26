@@ -1,9 +1,11 @@
 import React, { useState } from 'react'; 
 import { useEffect } from 'react'; 
-import MovieCard from '../MovieCard'; 
+import MovieCard from '../MovieCard';
 import axios from 'axios';
+import './Search.css';
 
 const API_URL = 'https://omdbapi.com?apikey=fe2f6c44'; 
+
 const Search = () => { 
 	const [movies, setMovies] = useState([]); 
 	const [searchTerm, setSearchTerm] = useState([]); 
@@ -13,21 +15,23 @@ const Search = () => {
 		setMovies(data.Search); 
 	} 
 	useEffect(() => { 
-		searchMovies('SpiderMan'); 
+		searchMovies('John wick'); 
 	}, []); 
 	return ( 
 		<div className="app"> 
-			<h1>GeeksforGeeks's Movie Center</h1> 
 
 			<div className="search"> 
 				<input 
 					placeholder="Search for Movies"
 					value={searchTerm} 
 					onChange={(e) => { setSearchTerm(e.target.value) }} 
+					onKeyDown={(e) => {
+						if (e.key === "Enter") {searchMovies(searchTerm)}
+						}
+					}
 				/> 
 				<img 
-					src= 
-"https://media.geeksforgeeks.org/wp-content/uploads/20230626112934/search.png"
+					src= {require("../img/SearchIcon.png")}
 					alt="search icon"
 					onClick={() => searchMovies(searchTerm)} 
 				/> 
@@ -41,7 +45,7 @@ const Search = () => {
 						))} 
 					</div>) : ( 
 						<div className="empty"> 
-							<h2>No Movies found</h2> 
+							<h2>Search bar empty. Please write something to search.</h2> 
 						</div> 
 					) 
 			} 
