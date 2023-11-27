@@ -24,9 +24,9 @@ const Search = () => {
 				<input 
 					placeholder="Search for Movies"
 					value={searchTerm} 
-					onChange={(e) => { setSearchTerm(e.target.value) }} 
-					onKeyDown={(e) => {
-						if (e.key === "Enter") {searchMovies(searchTerm)}
+					onChange={(Event) => { setSearchTerm(Event.target.value) }} 
+					onKeyDown={(Event) => {
+						if (Event.key === "Enter") {searchMovies(searchTerm)}
 						}
 					}
 				/> 
