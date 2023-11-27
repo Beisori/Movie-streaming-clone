@@ -11,7 +11,6 @@ export default function MovieGenres({requestUrl}){
     const [page, setPage] = useState(1);
 
     //https://api.themoviedb.org/3/genre/movie/list?api_key=eaa4d9ee470345a99f952f889c06479c&language=en
-    //^From here you can get the genre IDs for new requests.js paths
     
     useEffect(() => {
         async function getMoviesByGenre() {
