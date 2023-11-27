@@ -4,19 +4,19 @@ import MovieCard from '../MovieCard';
 import axios from 'axios';
 import './Search.css';
 
-const API_URL = 'https://omdbapi.com?apikey=fe2f6c44'; 
+const API_KEY = "eaa4d9ee470345a99f952f889c06479c";
+const API_URL = "https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchTerm}&include_adult=false&language=en-US&page=1"; 
 
 const Search = () => { 
 	const [movies, setMovies] = useState([]); 
 	const [searchTerm, setSearchTerm] = useState([]); 
 	const searchMovies = async (title) => { 
-		const response = await fetch(`${API_URL}&s=${title}`); 
-		const data = await response.json(); 
-		setMovies(data.Search); 
+	const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchTerm}&include_adult=false&language=en-US&page=1`);
+	setMovies((...movies) => [...movies, ...response.data.results]);
 	} 
 	useEffect(() => { 
 		searchMovies(searchTerm);
-	}, []); 
+    }, [searchTerm]);  //Tähän muutos lähdekoodiin
 	return ( 
 		<div className="app"> 
 
@@ -41,7 +41,7 @@ const Search = () => {
 				movies?.length > 0 
 					? (<div className="container"> 
 						{movies.map((movie) => ( 
-							<MovieCard movie={movie} /> 
+							<MovieCard key={movie.id} movie={movie} /> 
 						))} 
 					</div>) : ( 
 						<div className="empty"> 
