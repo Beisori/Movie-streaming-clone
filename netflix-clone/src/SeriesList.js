@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import axios, { imageBaseUrl } from "./axios"
+import axios from "./axios"
 
 const imageBaseUrl = "https://image.tmdb.org/t/p/original/";
-
 
 export default function SeriesList({ title, requestUrl, topRow }) {
     const [movies, setMovies] = useState([]);
