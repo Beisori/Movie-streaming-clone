@@ -1,5 +1,7 @@
+import Serieslist from "./Serieslist";
+
 export function Series() {
-  return <h1>Series</h1>
+  return <Serieslist></Serieslist>
 }
 
 export default Series;
