@@ -12,5 +12,7 @@ Netflix suoratoistosivun klooni sovelluskehitysprojekti-kurssia varten.
 
 ## Linkkejä
 
-Käytettiin apuna videota
-* [TMDB API - How to create netflix clone. Netflix clone with HTML,CSS, JS. Node JS Web app 2021](https://www.youtube.com/watch?v=FoD33gwhu00&t=330&ab_channel=ModernWeb)
+Käytettiin apuna:
+
+https://www.geeksforgeeks.org/movie-search-engine-using-react-and-api/
+https://www.youtube.com/watch?v=XtMThy8QKqU&t
