@@ -16,30 +16,16 @@ export default function MovieGenres(){
         async function getMoviesByGenre() {
             const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=${selectedGenre}&page=${page}`);
             console.log('Response', response)
-            setMoviesByGenres((...moviesByGenres) => [...moviesByGenres, ...response.data.results] );
-        }; //GENRES CHANGE CORRECTLY WITH THIS NOW, ONE IMAGE BROKEN!
+            setMoviesByGenres((...prevMovies) => [...prevMovies, ...response.data.results] );
+        };
         getMoviesByGenre();
     }, [selectedGenre, page]);
 
     const genreChanged = (Event) => {
         setSelectedGenre(Event.target.value);
         setPage(1);
-    } // WORKS!
-
-    const handleScroll = () => {
-        if(window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight){
-            return;
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return() => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+    }
     
-
     return(
         <div className="genre-dropdown-container">
             <select id="genreDropdown" value={selectedGenre} onChange={genreChanged}>
