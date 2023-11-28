@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from "./axios"
+import './SeriesList.css';
 
 const imageBaseUrl = "https://image.tmdb.org/t/p/original/";
 
-export default function SeriesList({ title, requestUrl, topRow }) {
+export default function SeriesList({ title, requestUrl}) {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -19,9 +20,11 @@ export default function SeriesList({ title, requestUrl, topRow }) {
         <div className='series-container'>
             <h2 className='series-title'>{title}</h2>
 
-            <div className='series-container'>
-                {movies.map(movie => (<img key={movie.id} className={`series-image-list ${topRow && "series-image-top-row"}`} src={`${imageBaseUrl}${topRow ? movie.poster_path : movie.backdrop_path || movie.poster_path}`} alt={movie.name} />))}
-            </div>
+            {movies.map(movie => (
+                <div key={movie.id}>
+                    <img className="series-images" src={`${imageBaseUrl}${movie.poster_path}`} alt={movie.title}/>
+                </div>
+            ))}
         </div> 
     )
 }

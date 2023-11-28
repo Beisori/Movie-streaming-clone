@@ -14,6 +14,7 @@ function Navbar() {
         <div className="navbar-logo">
           <img className="navbar-logo" src={require("./img/logo.png")} alt="Netflix Logo" />
         </div>
+        
       <div className="navbar-links">
         <Link to="Home">Home</Link>
         <Link to="Series">Series</Link>

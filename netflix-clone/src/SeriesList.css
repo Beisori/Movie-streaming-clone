@@ -1,24 +1,22 @@
 .series-container {
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    padding: 20px;
-  }
-  
-  .series-container::-webkit-scrollbar {
-    display: none;
-  }
-    
-  
-  .series-image {
-   
-    object-fit: contain;
-    width: 100%;
-    max-height: 100px;
-    margin-right: 10px;
-    transition: transform 450ms;
-  }
-  
-  .series-image:hover {
-    transform: scale(1.08);
-  }
+  display: flex;
+  flex-wrap: wrap;
+}
+.series-container::-webkit-scrollbar {
+  display: none;
+}
+.series-images {
+  border-radius: 4px;
+  max-height: 400px;
+  margin: auto;
+  padding: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  object-fit: cover;
+  transition: transform 450ms;
+  transform: translateY(5%)
+}
+.series-images:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

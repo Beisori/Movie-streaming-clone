@@ -1,22 +1,22 @@
-import React, { useState } from 'react'; 
-import { useEffect } from 'react'; 
+import React, { useState, useEffect } from 'react';  
 import MovieCard from '../MovieCard';
 import axios from 'axios';
 import './Search.css';
 
 const API_KEY = "eaa4d9ee470345a99f952f889c06479c";
-const API_URL = "https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchTerm}&include_adult=false&language=en-US&page=1"; 
 
 const Search = () => { 
 	const [movies, setMovies] = useState([]); 
 	const [searchTerm, setSearchTerm] = useState([]); 
+
 	const searchMovies = async (title) => { 
-	const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchTerm}&include_adult=false&language=en-US&page=1`);
-	setMovies((...movies) => [...movies, ...response.data.results]);
+		const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchTerm}&include_adult=false&language=en-US&page=1`);
+		setMovies((...movies) => [...movies, ...response.data.results]);
 	} 
 	useEffect(() => { 
 		searchMovies(searchTerm);
-    }, [searchTerm]);  //Tähän muutos lähdekoodiin
+    }, [searchTerm, searchMovies]);
+
 	return ( 
 		<div className="app"> 
 
