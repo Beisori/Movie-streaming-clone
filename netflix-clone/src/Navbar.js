@@ -13,20 +13,17 @@ function Navbar() {
         <div className="navbar-logo">
           <img className="navbar-logo" src={require("./img/logo.png")} alt="Netflix Logo" />
         </div>
-        
-      <div className="navbar-links">
-        <Link to="Home">Home</Link>
-        <Link to="Series">Series</Link>
-        <Link to="Movies">Movies</Link>
-        <Link to="Search">Search</Link>
-        
-      </div>
-      <div className="navbar-avatar">
-        <img
-        className="navbar_avatar"
-        src={require("./img/Netflix-avatar.png")}
-        alt="Netflix logo"/>
-      </div>
+
+        <div className="navbar-links">
+          <Link to="Home">Home</Link>
+          <Link to="Series">Series</Link>
+          <Link to="Movies">Movies</Link>
+          <Link to="Search">Search</Link>
+
+        </div>
+        <div className="navbar-avatar">
+
+        </div>
       </nav>
       <Routes>
         <Route path="*" element={<Home />} />
