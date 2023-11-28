@@ -19,7 +19,6 @@ export default function SeriesList({ title, requestUrl}) {
     return (
         <div className='series-container'>
             <h2 className='series-title'>{title}</h2>
-
             {movies.map(movie => (
                 <div key={movie.id}>
                     <img className="series-images" src={`${imageBaseUrl}${movie.poster_path}`} alt={movie.title}/>
