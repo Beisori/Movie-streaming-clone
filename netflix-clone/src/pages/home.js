@@ -8,7 +8,7 @@ import '../pages/home.css';
 export function Home() {
   return (
     <div className='home-container'>
-      <Banner></Banner>
+      <Banner />
       <MovieSlider title="Trending" requestUrl={requests.fetchTrending} />
       <MovieSlider title="Top Rated" requestUrl={requests.fetchTopRated} />
       <MovieSlider title="Popular" requestUrl={requests.fetchPopular} />
